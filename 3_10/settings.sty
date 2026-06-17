@@ -1,0 +1,55 @@
+\ProvidesPackage{settings}
+
+% Языковые пакеты и кодировки
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+% Геометрия страницы по регламенту ИТМО (Левое 30мм, правое 15мм, верх/низ 20мм)
+\usepackage{geometry}
+\geometry{left=3.0cm, right=1.5cm, top=2.0cm, bottom=2.0cm}
+
+% Математические пакеты
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+% Работа с графикой
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption} 
+
+% Табличные пакеты
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}  
+\usepackage{makecell}   
+\usepackage{enumerate}
+
+% Настройка подписей через пакет caption
+\usepackage{caption}
+\addto\captionsrussian{\renewcommand{\figurename}{Рисунок}}
+\addto\captionsrussian{\renewcommand{\tablename}{Таблица}}
+
+% Стили подписей к рисункам (по центру, разделитель — длинное тире)
+\captionsetup[figure]{
+    justification=centering, 
+    font=normalsize, 
+    labelsep=endash, 
+    singlelinecheck=false
+}
+
+% Стили подписей к таблицам (по левому краю)
+\captionsetup[table]{
+    justification=raggedright, 
+    font=normalsize, 
+    labelsep=endash, 
+    singlelinecheck=false
+}
+
+% Оформление заголовков БЕЗ нумерации (СКОБКИ ИСПРАВЛЕНЫ)
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
